@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container div {
+            background-color: darkkhaki;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: auto 60% auto;
+            grid-template-rows: auto auto;
+            column-gap: 20px;
+        }
+        #i1 {
+            grid-column: 1/4;
+        }
+        /*#i3 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }*/
+        #i2 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 3;
+        }
+        #img1 {
+            width: 500px;
+            height: 300px;
+            float: right;
+        }
+        p {
+            border: 3px solid fuchsia;
+            width: 400px;
+            height: 300px;
+            overflow: scroll;
+        }
+        #id1 {
+            width: 300px;
+            height: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 2s;
+            margin-left: 30%;
+            margin-right: 10%;
+            animation: move 3s infinite ease-in-out alternate-reverse ;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            animation: triangle 3s infinite linear alternate-reverse;
+        }
+        body {
+            background-color: palevioletred;
+            animation: bgc 2s infinite;
+        }
+        @media screen and (max-width:600px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            body {
+                background-color: coral;
+            }
+        }
+        #id1:hover {
+            width: 320px;
+            height: 420px;
+            transform: scale(0.7);
+        }
+        @keyframes move {
+            from {
+                transform: translateX(0px);
+                background-color: red;
+            }
+            to {
+                transform: translateX(250px);
+                background-color: dodgerblue;
+            }
+        }
+        @keyframes bgc {
+            0% {
+                background-color: purple;
+            }
+            20% {
+                background-color: blue;
+            }
+            40% {
+                background-color: green;
+            }
+            60% {
+                background-color: yellow;
+            }
+            80% {
+                background-color: orange;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+        @keyframes triangle {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="i1">1</div>
+        <div id="i2">2</div>
+        <div id="i3">3</div>
+        <div id="i4">4</div>
+        <div id="i5">5</div>
+        <div id="i6">6</div>
+    </div><br><br>
+    <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfwCdRY4AoiogZtl3LL6nHuTian5eR_45YilzNWHUi1w&s=10">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error omnis unde doloremque. Sint et sunt sit minima modi beatae aliquam. Totam ullam eaque doloribus itaque explicabo, id nostrum pariatur vero!
+        Rem, sit corporis odit laudantium recusandae soluta nesciunt eum velit corrupti tempore vel facere eveniet provident maxime voluptatum ullam natus doloribus quam labore quae, molestiae culpa facilis. Doloribus, consequatur a.
+        Asperiores cupiditate vel officia expedita consequuntur sunt sapiente architecto culpa eum quas eveniet eligendi nam dolores voluptates sequi recusandae, quo libero iure ab ipsum eaque maxime. Illo asperiores quidem officiis.
+        Animi facilis assumenda quam ex suscipit at. Iure eaque eligendi, optio, nulla nesciunt deserunt ipsa in accusantium ipsum, cum provident. Natus iusto id possimus quidem, illo deserunt nostrum quae fugiat.
+        Accusantium officiis cum dolorum voluptatum voluptatibus minus repellendus totam, aliquid, consequatur maxime earum esse maiores sint beatae molestias quidem, assumenda culpa vel expedita blanditiis hic harum facilis! Molestiae, facere eligendi.
+        Odio voluptate dolores alias provident dolorem eos, harum eius illum eveniet totam, enim fugit dignissimos. Fuga magnam est natus itaque sed saepe dicta tempora aliquam? Delectus pariatur molestiae maxime sint.
+        Eos blanditiis, vero assumenda magni veniam ipsum dignissimos nesciunt laborum eum exercitationem explicabo optio illum fugiat illo officia nostrum fugit esse? Provident ducimus architecto eveniet distinctio incidunt veritatis, neque repellat!
+        Blanditiis, veniam sint et deserunt sunt quibusdam delectus illum numquam quod cumque tenetur perferendis rem recusandae, corporis esse dolorum atque! Velit explicabo nam autem tenetur dolor quidem, ducimus necessitatibus porro!
+        Ipsum perferendis, repellendus ullam non voluptatibus consectetur unde. Nostrum voluptas odio recusandae, veritatis nisi doloremque quibusdam eius eos laboriosam, ea dolores! Tempore esse quis culpa, explicabo a veritatis soluta odio!
+        Voluptate quis quidem, repudiandae odit eum consectetur quas natus vero, ab totam harum quisquam molestiae aliquam. Totam possimus dolorem mollitia voluptate at, vitae praesentium expedita aspernatur eos obcaecati qui. Incidunt.
+    </p>
+    <br><br>
+    <div id="id1">
+        <img id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9lRwuegODEQXlThzPnH57kchOtE07rAhtM-Vaf9Ivw&s=10">
+        <h2>View Profile</h2>
+    </div>
+</body>
+</html>
