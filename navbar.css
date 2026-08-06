@@ -1,0 +1,11 @@
+#id3 {
+    background-color: green;
+}
+.c4 {
+    color: maroon;
+}
+.c5,.c6 {
+    background-color: yellow;
+    font-family: 'Times New Roman';
+    text-align: right;
+}
