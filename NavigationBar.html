@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav {
+            background-color: goldenrod;
+            display: flex;
+        }
+        span{
+            color: greenyellow;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        a {
+            font-size: 34px;
+            color: darkviolet;
+        }
+        nav {
+            margin-left: 40%;
+        }
+        button {
+            background-color: white;
+            color: darkslategrey;
+            padding: 2px;
+            display: none;
+        }
+         @media screen and (max-width:600px) {
+            nav {
+                display: none;
+            }
+            button {
+                display: block;
+            }
+            body {
+                background-color: limegreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <span>Christmas Academy</span>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+        </nav>
+        <button>Menu</button>
+    </div>
+</body>
+</html>
