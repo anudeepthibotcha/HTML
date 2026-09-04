@@ -1,54 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Defines the character encoding used by the webpage -->
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on mobile and other devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Title displayed in the browser tab -->
+    <title>Christmas Academy</title>
+
     <style>
+        /* Navigation bar container */
         #nav {
             background-color: goldenrod;
             display: flex;
         }
-        span{
+
+        /* Academy name/logo styling */
+        span {
             color: greenyellow;
             font-size: 50px;
             font-weight: bold;
         }
+
+        /* Navigation link styling */
         a {
             font-size: 34px;
             color: darkviolet;
         }
+
+        /* Moves the navigation links toward the right side */
         nav {
             margin-left: 40%;
         }
+
+        /* Menu button is hidden on larger screens */
         button {
             background-color: white;
             color: darkslategrey;
             padding: 2px;
             display: none;
         }
-         @media screen and (max-width:600px) {
+
+        /* Responsive styles for screens smaller than or equal to 600px */
+        @media screen and (max-width: 600px) {
+
+            /* Hide navigation links on small screens */
             nav {
                 display: none;
             }
+
+            /* Show the Menu button on small screens */
             button {
                 display: block;
             }
+
+            /* Change the page background color on small screens */
             body {
                 background-color: limegreen;
             }
         }
     </style>
 </head>
+
 <body>
+    <!-- Main navigation bar -->
     <div id="nav">
+
+        <!-- Website/academy name -->
         <span>Christmas Academy</span>
+
+        <!-- Navigation menu links -->
         <nav>
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Gallery</a>
         </nav>
+
+        <!-- Menu button displayed on small screens -->
         <button>Menu</button>
     </div>
 </body>
