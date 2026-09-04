@@ -1,66 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for the webpage -->
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Title displayed in the browser tab -->
+    <title>Responsive Card Layout</title>
+
     <style>
+        /* Styling for each individual card */
         .container div {
             border: 1px solid black;
             border-radius: 10px;
             width: 350px;
             height: fit-content;
         }
+
+        /* Main container that holds all the cards */
         .container {
             border: 1px solid black;
             display: flex;
+
+            /* Allows cards to move to the next row on smaller screens */
             flex-flow: row wrap;
+
+            /* Adds equal spacing around the cards */
             justify-content: space-around;
         }
+
+        /* Sets the size of images inside the cards */
         img {
             height: 250px;
             width: 350px;
         }
+
+        /* Styling for the Read More button */
         button {
             left: 100px;
             background-color: deepskyblue;
             color: white;
         }
+
+        /* Heading styling inside each card */
         h2 {
             left: 100px;
         }
+
+        /* Styling for the first main heading */
         #id1 {
             text-align: center;
             font-family: Arial;
         }
+
+        /* Styling for the second main heading */
         #id2 {
             text-align: center;
             font-family: Verdana;
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Container that holds all three cards -->
     <div class="container">
+
+        <!-- First card -->
         <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzJiL2savWoGa11xgA0dE_0XjhbdeZokBLo_dScmZJKg&s=10"> 
+            <!-- Moonlight image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzJiL2savWoGa11xgA0dE_0XjhbdeZokBLo_dScmZJKg&s=10">
+
+            <!-- Card title -->
             <h2>Moonlight</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quas veniam praesentium amet ducimus quidem molestiae nisi minus. Accusamus officia possimus, totam qui ab ipsam eveniet placeat eligendi inventore blanditiis.</p>
+
+            <!-- Card description -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iste quas veniam praesentium amet ducimus quidem molestiae
+                nisi minus. Accusamus officia possimus, totam qui ab ipsam
+                eveniet placeat eligendi inventore blanditiis.
+            </p>
+
+            <!-- Button for reading more information -->
             <button>Read More</button>
         </div>
+
+        <!-- Second card -->
         <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpp8-cHexf_FGjWoCUhN2cUfLkm1iPEisBqnmzktIa4g&s=10"> 
+            <!-- Forest image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpp8-cHexf_FGjWoCUhN2cUfLkm1iPEisBqnmzktIa4g&s=10">
+
+            <!-- Card title -->
             <h2>Forest</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quas veniam praesentium amet ducimus quidem molestiae nisi minus. Accusamus officia possimus, totam qui ab ipsam eveniet placeat eligendi inventore blanditiis.</p>
+
+            <!-- Card description -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iste quas veniam praesentium amet ducimus quidem molestiae
+                nisi minus. Accusamus officia possimus, totam qui ab ipsam
+                eveniet placeat eligendi inventore blanditiis.
+            </p>
+
+            <!-- Button for reading more information -->
             <button>Read More</button>
         </div>
+
+        <!-- Third card -->
         <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj1-cKh0sypdyTdasJ8lQS-ejymuxYpgLQ5HUUG3rnw&s=10"> 
+            <!-- Feather image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj1-cKh0sypdyTdasJ8lQS-ejymuxYpgLQ5HUUG3rnw&s=10">
+
+            <!-- Card title -->
             <h2>Feather</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quas veniam praesentium amet ducimus quidem molestiae nisi minus. Accusamus officia possimus, totam qui ab ipsam eveniet placeat eligendi inventore blanditiis.</p>
+
+            <!-- Card description -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iste quas veniam praesentium amet ducimus quidem molestiae
+                nisi minus. Accusamus officia possimus, totam qui ab ipsam
+                eveniet placeat eligendi inventore blanditiis.
+            </p>
+
+            <!-- Button for reading more information -->
             <button>Read More</button>
         </div>
+
     </div>
+
+    <!-- Main heading -->
     <h1 id="id1">HTML & CSS</h1>
-    <h1 id="id2"><span style="color: green;">Responsive</span> <span style="color: deeppink;">Card Layout</span></h1>
+
+    <!-- Subtitle with different colors for each word -->
+    <h1 id="id2">
+        <span style="color: green;">Responsive</span>
+        <span style="color: deeppink;">Card Layout</span>
+    </h1>
+
 </body>
 </html>
