@@ -2,129 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+
     <style>
+        /* Styling applied to all div elements inside the container */
         .container div {
             background-color: darkkhaki;
             border: 2px solid black;
             text-align: center;
             padding: 20px;
         }
+
+        /* Creates a CSS Grid layout with 3 columns and 2 rows */
         .container {
             display: grid;
             grid-template-columns: auto 60% auto;
             grid-template-rows: auto auto;
             column-gap: 20px;
         }
+
+        /* Makes item 1 occupy all three columns */
         #i1 {
             grid-column: 1/4;
         }
-        /*#i3 {
+
+        /*
+        #i3 {
             grid-row-start: 2;
             grid-row-end: 4;
-        }*/
+        }
+        */
+
+        /* Makes item 2 span across two rows and place it in column 3 */
         #i2 {
             grid-row-start: 1;
             grid-row-end: 3;
             grid-column-start: 3;
         }
+
+        /* Styling for the first image */
         #img1 {
             width: 500px;
             height: 300px;
             float: right;
         }
+
+        /* Creates a fixed-size paragraph with scrolling content */
         p {
             border: 3px solid fuchsia;
             width: 400px;
             height: 300px;
             overflow: scroll;
         }
+
+        /* Profile card styling */
         #id1 {
             width: 300px;
             height: 400px;
             border: 2px solid black;
             border-radius: 20px;
             overflow: hidden;
+
+            /* Smoothly applies changes such as hover effects */
             transition: 2s;
+
+            /* Positions the card horizontally */
             margin-left: 30%;
             margin-right: 10%;
-            animation: move 3s infinite ease-in-out alternate-reverse ;
+
+            /* Applies the move animation continuously */
+            animation: move 3s infinite ease-in-out alternate-reverse;
         }
+
+        /* Styling applied to all images */
         img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
+
+            /* Rotates the image continuously */
             animation: triangle 3s infinite linear alternate-reverse;
         }
+
+        /* Sets the initial background color of the webpage */
         body {
             background-color: palevioletred;
+
+            /* Changes the background color continuously */
             animation: bgc 2s infinite;
         }
-        @media screen and (max-width:600px) {
+
+        /* Responsive design for screens smaller than 600px */
+        @media screen and (max-width: 600px) {
+
+            /* Changes grid layout into a vertical flex layout */
             .container {
                 display: flex;
                 flex-direction: column;
             }
+
+            /* Changes background color on smaller screens */
             body {
                 background-color: coral;
             }
         }
+
+        /* Changes the profile card when the mouse hovers over it */
         #id1:hover {
             width: 320px;
             height: 420px;
+
+            /* Slightly reduces the card size using scale */
             transform: scale(0.7);
         }
+
+        /* Animation for moving the profile card horizontally */
         @keyframes move {
             from {
                 transform: translateX(0px);
                 background-color: red;
             }
+
             to {
                 transform: translateX(250px);
                 background-color: dodgerblue;
             }
         }
+
+        /* Animation that changes the webpage background color */
         @keyframes bgc {
             0% {
                 background-color: purple;
             }
+
             20% {
                 background-color: blue;
             }
+
             40% {
                 background-color: green;
             }
+
             60% {
                 background-color: yellow;
             }
+
             80% {
                 background-color: orange;
             }
+
             100% {
                 background-color: red;
             }
         }
+
+        /* Animation used to continuously rotate the image */
         @keyframes triangle {
             from {
                 transform: rotate(0deg);
             }
+
             to {
                 transform: rotate(360deg);
             }
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Main container demonstrating CSS Grid -->
     <div class="container">
+
+        <!-- Grid item 1: occupies the complete first row -->
         <div id="i1">1</div>
+
+        <!-- Grid item 2: spans two rows and is placed in the third column -->
         <div id="i2">2</div>
+
+        <!-- Additional grid items -->
         <div id="i3">3</div>
         <div id="i4">4</div>
         <div id="i5">5</div>
         <div id="i6">6</div>
-    </div><br><br>
-    <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfwCdRY4AoiogZtl3LL6nHuTian5eR_45YilzNWHUi1w&s=10">
+    </div>
+
+    <br><br>
+
+    <!-- Image floated to the right side of the paragraph -->
+    <img id="img1"
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfwCdRY4AoiogZtl3LL6nHuTian5eR_45YilzNWHUi1w&s=10">
+
+    <!-- Paragraph with fixed dimensions and scrollable content -->
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error omnis unde doloremque. Sint et sunt sit minima modi beatae aliquam. Totam ullam eaque doloribus itaque explicabo, id nostrum pariatur vero!
         Rem, sit corporis odit laudantium recusandae soluta nesciunt eum velit corrupti tempore vel facere eveniet provident maxime voluptatum ullam natus doloribus quam labore quae, molestiae culpa facilis. Doloribus, consequatur a.
@@ -137,10 +210,19 @@
         Ipsum perferendis, repellendus ullam non voluptatibus consectetur unde. Nostrum voluptas odio recusandae, veritatis nisi doloremque quibusdam eius eos laboriosam, ea dolores! Tempore esse quis culpa, explicabo a veritatis soluta odio!
         Voluptate quis quidem, repudiandae odit eum consectetur quas natus vero, ab totam harum quisquam molestiae aliquam. Totam possimus dolorem mollitia voluptate at, vitae praesentium expedita aspernatur eos obcaecati qui. Incidunt.
     </p>
+
     <br><br>
+
+    <!-- Profile card with an animated profile image -->
     <div id="id1">
-        <img id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9lRwuegODEQXlThzPnH57kchOtE07rAhtM-Vaf9Ivw&s=10">
+
+        <!-- Profile image -->
+        <img id="img2"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9lRwuegODEQXlThzPnH57kchOtE07rAhtM-Vaf9Ivw&s=10">
+
+        <!-- Profile heading -->
         <h2>View Profile</h2>
     </div>
+
 </body>
 </html>
