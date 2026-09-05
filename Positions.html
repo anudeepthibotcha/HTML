@@ -1,16 +1,25 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
+        /* Static Position:
+           Static is the default position of an element.
+           top, right, bottom, and left have no effect on static elements. */
         #id1 {
             color: bisque;
             background-color: darkolivegreen;
             position: static;
             left: 25px;
         }
+
+        /* Relative Position:
+           The element remains in its normal position but can be moved
+           relative to its original position using top, right, bottom, or left. */
         #id2 {
             color: greenyellow;
             background-color: darkslateblue;
@@ -18,73 +27,140 @@
             right: 15px;
             top: 275px;
         }
+
+        /* Fixed Position:
+           The element stays fixed relative to the browser window.
+           It remains visible even when the page is scrolled. */
         #id3 {
             color: sandybrown;
             background-color: navy;
             position: fixed;
             right: 250px;
         }
+
+        /* Sticky Position:
+           The element behaves like a relative element until a scrolling
+           position is reached, then it behaves like a fixed element. */
         #id4 {
             color: darkturquoise;
             background-color: deeppink;
             position: sticky;
             bottom: 45px;
         }
+
+        /* Absolute Position:
+           The image is positioned relative to its nearest positioned
+           ancestor. z-index:-1 places it behind other elements. */
         img {
             position: absolute;
             bottom: 30px;
             z-index: -1;
         }
+
+        /* Inline Display:
+           Makes block-level elements behave like inline elements.
+           Multiple elements can appear on the same line. */
         #id5 {
             color: gold;
             display: inline;
         }
+
         #id6 {
             color: red;
             display: inline;
         }
+
+        /* Image Styling:
+           Sets the size and display behavior of all images.
+           display:block makes the image occupy its own line. */
         img {
             width: 150px;
             height: 300px;
             display: block;
             right: 35px;
         }
-        #div1 {background-color: green;width: 200;height: fit-content;display: inline-block;}
-        #div2 {background-color: blue;width: 200;height: fit-content;display: inline-block;}
+
+        /* Inline-block:
+           Allows elements to appear side-by-side while still accepting
+           width and height properties. */
+        #div1 {
+            background-color: green;
+            width: 200;
+            height: fit-content;
+            display: inline-block;
+        }
+
+        #div2 {
+            background-color: blue;
+            width: 200;
+            height: fit-content;
+            display: inline-block;
+        }
+
+        /* Link Pseudo-classes:
+           :link   -> unvisited link
+           :active -> link while it is being clicked
+           :visited -> link that has already been visited
+           :hover -> when the mouse pointer is placed over the link */
         a:link {
             color: darkorange;
         }
+
         a:active {
             color: lightslategray;
         }
+
         a:visited {
             color: mediumvioletred;
         }
+
         a:hover {
             color: blue;
             background-color: crimson;
         }
+
+        /* nth-child():
+           Selects list items based on their position.
+           odd selects the 1st, 3rd, 5th, etc. items. */
         ol li:nth-child(odd) {
             color: darkmagenta;
         }
+
+        /* ::first-letter:
+           Styles only the first letter of each paragraph. */
         p::first-letter {
             color: purple;
             font-size: 40px;
             font-weight: bolder;
         }
+
+        /* ::before:
+           Adds content before the existing paragraph content. */
         p::before {
             content: "Start";
         }
+
+        /* ::selection:
+           Changes the appearance of text when the user selects it. */
         p::selection {
             color: cyan;
             background-color: magenta;
         }
+
+        /* ::marker:
+           Styles the bullet or number marker of list items. */
         li::marker {
             color: darkseagreen;
         }
+
+        /* Applies a color to all list items. */
         li {
             color: firebrick;
         }
+
+        /* Styles all div elements inside .container.
+           These properties demonstrate borders, alignment, size,
+           background, and text styling. */
         .container div {
             border: 3px solid indianred;
             background-color: cornflowerblue;
@@ -93,48 +169,90 @@
             width: 200px;
             height: 200px;
         }
+
+        /* Flexbox Container:
+           display:flex activates Flexbox.
+           flex-flow: row wrap means items are arranged in a row
+           and move to the next line when there is not enough space.
+           align-items controls vertical alignment.
+           justify-content controls horizontal alignment. */
         .container {
             display: flex;
-            /*flex-direction: row;
-            flex-wrap: wrap;*/
+
+            /* flex-direction: row;
+               flex-wrap: wrap; */
+
             flex-flow: row wrap;
             background-color: darkturquoise;
             height: 300px;
-            /*justify-content: space-evenly;*/
+
+            /* justify-content: space-evenly; */
+
             align-items: center;
             justify-content: center;
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Demonstrating different CSS position values -->
     <h2 id="id1">Static Position</h2>
     <h2 id="id2">Relative Position</h2>
     <h2 id="id3">Fixed Position</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8G8c-fdid082WrLtQSHB8jUUPe1G-REO_FlFlCY4hbw&s=10" height="400" width="200">
+
+    <!-- Image with absolute positioning -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8G8c-fdid082WrLtQSHB8jUUPe1G-REO_FlFlCY4hbw&s=10"
+         height="400"
+         width="200">
+
     <h2 id="id4">Sticky Position</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8G8c-fdid082WrLtQSHB8jUUPe1G-REO_FlFlCY4hbw&s=10" height="400" width="200">
+
+    <!-- Another image used to demonstrate image positioning -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8G8c-fdid082WrLtQSHB8jUUPe1G-REO_FlFlCY4hbw&s=10"
+         height="400"
+         width="200">
+
     <br><br>
-    <h2 id="id5">Lion <h2 id="id6">Heart</h2> </h2><br><br>
+
+    <!-- Demonstrating inline display -->
+    <h2 id="id5">Lion
+        <h2 id="id6">Heart</h2>
+    </h2>
+
+    <br><br>
+
+    <!-- Demonstrating inline-block display -->
     <div id="div1">
         <p>Mountain</p>
     </div>
+
     <div id="div2">
         <p>River</p>
     </div>
+
     <br><br>
+
+    <!-- Demonstrating link pseudo-classes -->
     <a href="basic.html">Home</a>
+
+    <!-- Unordered List -->
     <ul>
         <li>Apple</li>
         <li>Ball</li>
         <li>Cat</li>
         <li>Dog</li>
     </ul>
+
+    <!-- Ordered List with nth-child styling -->
     <ol>
         <li>Egg</li>
         <li>Fan</li>
         <li>Gate</li>
         <li>Hat</li>
     </ol>
+
+    <!-- Paragraph used to demonstrate pseudo-elements -->
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, impedit? Culpa necessitatibus soluta harum odit ea quia veniam. Nam nemo a esse ducimus sint? Nesciunt repudiandae hic veniam enim qui!
         Natus deserunt dolore excepturi adipisci explicabo. Optio officiis fuga ad earum, eligendi doloremque labore voluptatum vitae? Soluta libero, error minus adipisci inventore id unde voluptatibus, omnis vero eum veritatis eaque.
@@ -147,17 +265,22 @@
         Corrupti, illo? Eligendi excepturi minus dolorem facilis dolores omnis tenetur illo expedita fuga ipsam ullam eaque ipsum ducimus sunt, quisquam quo sapiente architecto magnam a soluta assumenda voluptas non! Recusandae!
         Unde suscipit placeat nostrum adipisci alias similique modi accusantium quas tempora. Rem nobis sint ut voluptatum ducimus veniam illum dolorem, ipsam earum, aliquid, iusto laudantium minus quos at odio laboriosam.
     </p>
+
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, tenetur aperiam ab ullam est nisi odio aliquam expedita error eligendi eos totam quos ut voluptatum aut similique quisquam quis ipsum.
         Accusamus aspernatur eligendi dicta dignissimos velit nulla, tempora vero quibusdam in, architecto vitae suscipit ad exercitationem. Ex maxime, totam magni quibusdam cupiditate repellendus vero! Doloremque facilis laboriosam id est illum!
         Itaque eaque, dolorum autem quis sequi cum quasi nostrum nemo quidem, ad repudiandae esse rem voluptate, dolore sed! Modi similique repellendus at consequatur consequuntur facere labore nobis suscipit culpa deserunt.
     </p>
+
+    <!-- Another ordered list -->
     <ol>
         <li>Oceans</li>
         <li>Seas</li>
         <li>Rivers</li>
         <li>Lakes</li>
     </ol>
+
+    <!-- Flexbox container with six items -->
     <div class="container">
         <div>1</div>
         <div>2</div>
@@ -166,5 +289,7 @@
         <div>5</div>
         <div>6</div>
     </div>
+
 </body>
 </html>
+```
