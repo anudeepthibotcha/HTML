@@ -1,63 +1,103 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Defines the character encoding used in the webpage -->
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Title displayed on the browser tab -->
+    <title>Profile Card</title>
+
     <style>
+        /* Main profile card container */
         #id1 {
-            border: 1px solid black;
-            width: 300px;
-            height: 400px;
-            border-radius: 10px;
-            margin-left: 40%;
-            text-align: center;
+            border: 1px solid black;       /* Adds a border around the card */
+            width: 300px;                  /* Sets the card width */
+            height: 400px;                 /* Sets the card height */
+            border-radius: 10px;           /* Rounds the corners of the card */
+            margin-left: 40%;              /* Moves the card toward the center */
+            text-align: center;            /* Centers the text inside the card */
         }
+
+        /* Profile image styling */
         img {
-            height: 100px;
-            width: 100px;
-            position: absolute;
-            border-radius: 50%;
-            border-width: 2px white;
-            top: 100px;
-            left: 715px;
+            height: 100px;                 /* Sets image height */
+            width: 100px;                  /* Sets image width */
+            position: absolute;            /* Positions the image independently */
+            border-radius: 50%;            /* Makes the image circular */
+            border-width: 2px white;       /* Sets the border width */
+            top: 100px;                    /* Positions image from the top */
+            left: 715px;                   /* Positions image from the left */
         }
+
+        /* Container for followers, likes, and photos */
         #id2 {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            justify-content: space-evenly;
+            text-align: center;            /* Centers the content */
+            display: flex;                 /* Places the items in a row */
+            justify-content: center;       /* Centers the group horizontally */
+            justify-content: space-evenly; /* Adds equal space between items */
         }
+
+        /* Top blue section of the profile card */
         #id3 {
-            background-color: dodgerblue;
-            height: 150px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            background-color: dodgerblue;  /* Sets the background color */
+            height: 150px;                 /* Sets the height of the top section */
+            border-top-left-radius: 10px;  /* Rounds the top-left corner */
+            border-top-right-radius: 10px; /* Rounds the top-right corner */
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Main profile card -->
     <div id="id1">
+
+        <!-- Blue header section of the profile card -->
         <div id="id3"></div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeptp9XXymzwbswS_pYHg6QsgzPthcAyIdy8Dzzm0aNw&s=10">
+
+        <!-- Profile picture -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeptp9XXymzwbswS_pYHg6QsgzPthcAyIdy8Dzzm0aNw&s=10"
+             alt="Profile Picture">
+
         <br>
+
+        <!-- Profile name -->
         <h1>Happy Girl 26</h1>
+
+        <!-- Profile location -->
         <h3>California</h3>
+
+        <!-- Horizontal line separating profile details -->
         <hr>
+
+        <!-- Section containing followers, likes, and photos -->
         <div id="id2">
+
+            <!-- Followers count -->
             <div>
                 <h2>70K</h2>
                 <p>Followers</p>
             </div>
+
+            <!-- Likes count -->
             <div>
                 <h2>900K</h2>
                 <p>Likes</p>
             </div>
+
+            <!-- Photos count -->
             <div>
                 <h2>1.5K</h2>
                 <p>Photos</p>
             </div>
+
         </div>
     </div>
+
 </body>
 </html>
+```
